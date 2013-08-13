@@ -8,6 +8,7 @@ package com.mycompany.veritabani;
  *
  * @author tolga
  */
+
 import java.sql.*;
 
 public class baglan

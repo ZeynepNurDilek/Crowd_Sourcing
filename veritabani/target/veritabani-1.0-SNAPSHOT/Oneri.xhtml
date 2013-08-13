@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:p="http://primefaces.org/ui" >
+      xmlns:p="http://primefaces.org/ui" 
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
    
     <h:head>
         <title>Eğitim Bilişim Ağı - #{image.bul().baslik}</title>
@@ -39,7 +40,7 @@
            <div class="panel" style="margin-top: 200px;margin-left: 200px">
                <div class="page-header"> <h1>#{image.bul().baslik}</h1> </div>
                        
-               <p:layout style="margin-top: 10px ; min-width:500px;max-width: 950px;min-height:300px;max-height: 300px;border-color: white" id="layout">  
+               <p:layout style="margin-top: 10px ; min-width:500px;max-width: 850px;min-height:300px;max-height: 300px;border-color: white" id="layout">  
                     
                <p:layoutUnit style="border-color: white" position="west" resizable="false" size="400">  
                     <img src="images/#{image.bul().resimurl}" style="height: 270px;width: 400px"></img>    
@@ -52,42 +53,23 @@
                     
                    
                         
-                    <div class="well" style="height:  190px;width: 400px ;margin-top: 10px">
+                    <div class="well" style="height:  200px;width: 300px ;margin-top: 10px">
                                
                                 <table>
-                                    <tr>
-                                        <td>  </td>
-                                        <td style="margin-left: 20px"><strong>Güncel</strong></td>
-                                        <td style="margin-left: 20px"><strong>Önerileriniz</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Başlık:     </strong></td>
-                                        <td style="margin-left: 20px">#{image.bul().baslik}</td>
-                                        <td style="margin-left: 20px"><input class="input-small" type="text" placeholder="small"></input></td>       
-                                    </tr>
+                                    <tr><td>  </td><td style="margin-left: 20px"><strong>Önerileriniz</strong></td></tr>
                                     
-                                    <tr>
-                                        <td><strong>Içerik:</strong></td>
-                                        <td style="margin-left: 20px"> #{image.bul().icerik}</td>
-                                        <td style="margin-left: 20px"><input class="input-small" type="text" placeholder="small"></input></td>       
-                                    </tr>
-                                     <tr>
-                                         <td><strong>Kategori:</strong></td>
-                                        <td style="margin-left: 20px"> #{image.bul().kategori}</td>
-                                        <td style="margin-left: 20px"><input class="input-small" type="text" placeholder="small"></input></td>       
-                                    </tr>
-                                     <tr>
-                                         <td><strong>Etiket:</strong></td>
-                                        <td style="margin-left: 20px">#{image.bul().etiket}</td>
-                                        <td style="margin-left: 20px"><input class="input-small" type="text" placeholder="small"></input></td>       
-                                    </tr>
+                                    <tr><td><strong>Başlık:</strong></td><td style="margin-left: 20px"><input class="input-medium" type="text" placeholder="#{image.bul().baslik}" value="#{oneri.s_baslik}"></input></td></tr>
                                     
+                                    <tr><td><strong>Içerik:</strong></td><td style="margin-left: 20px"><input class="input-medium" type="text" placeholder="#{image.bul().icerik}" value="#{oneri.s_icerik}"></input></td></tr>
                                     
+                                    <tr><td><strong>Kategori:</strong></td><td style="margin-left: 20px"><input class="input-medium" type="text" placeholder="#{image.bul().kategori}" value="#{oneri.s_kategori}" ></input></td>       </tr>
+                                     
+                                    <tr><td><strong>Etiket:</strong></td><td style="margin-left: 20px"><input class="input-medium" type="text" placeholder="#{image.bul().etiket}" value="#{oneri.s_etiket}"></input></td>       </tr>
+                                    
+                                    <tr><td></td><td> <button type="submit" style='width:150px' class="btn btn-primary">Öner</button> </td><td><button type="button" class="btn" onclick="#{oneri.kaydet()}">Vazgeç</button></td></tr>
                                 </table>
                                    
-                                  
-                                   
-                           </div>
+                    </div>
                                    
                </p:layoutUnit>
                

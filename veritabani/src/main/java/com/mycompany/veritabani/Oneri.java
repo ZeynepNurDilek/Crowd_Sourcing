@@ -53,6 +53,16 @@ public class Oneri {
             this.red_sayisi=red_sayisi;
             
         }
+        
+        
+        public void kaydet(){
+        
+        
+        
+        
+        
+        }
+        
 
     /**
      * @return the s_id

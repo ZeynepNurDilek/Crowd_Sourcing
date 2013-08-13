@@ -246,12 +246,6 @@ public class Image {
     public void setTotalim(int totalim) {
         this.totalim = totalim;
     }
-       
-  
- 
-
-   
-   
         
         
     }
